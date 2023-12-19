@@ -6,7 +6,7 @@ import CouchDBApi from './CouchDBApi';
 
 const app = express()
 
-app.listen(3278, () => console.log('Server listening on 3278'))
+app.listen(22000, () => console.log('Server listening on 22000'))
 
 app.use(compression())
 app.use(cors())

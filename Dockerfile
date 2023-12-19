@@ -13,9 +13,7 @@ COPY ./package.json ./package.json
 COPY --from=build /app/dist /app/dist
 RUN npm install --omit dev
 
-EXPOSE 21000/udp
-EXPOSE 21000/tcp
-EXPOSE 21001/udp
+EXPOSE 22000/udp
 ENV ACARFLOWDB_ADDRESS='https://localhost'
 
 CMD [ "node", "dist/main.js"]
