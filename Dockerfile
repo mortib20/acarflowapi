@@ -8,7 +8,6 @@ RUN npm run build
 
 FROM node:slim as final
 WORKDIR /app
-COPY ./outputs.json ./outputs.json
 COPY ./package.json ./package.json
 COPY --from=build /app/dist /app/dist
 RUN npm install --omit dev
